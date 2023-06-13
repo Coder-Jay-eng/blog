@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to DB
-connectDB();
+void connectDB();
 
 app.use(express.static('public'));
 
