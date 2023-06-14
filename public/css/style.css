@@ -294,7 +294,7 @@ h3 {font-size: var(--font-size-md);}
     position: absolute;
     top: 0;
     right: 0;
-    color: var(--gray-light);
+    color: whitesmoke;
     padding: 15px;
 }
 
