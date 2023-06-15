@@ -6,6 +6,7 @@ const Post = require('../models/Post');
 Get
 Home
 */
+
 router.get('', async (req, res) => {
 	try {
 		const locals = {
