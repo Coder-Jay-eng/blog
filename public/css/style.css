@@ -13,7 +13,6 @@
     --border-radius: 10px;
 }
 
-
  body {
     font-family: 'Raleway', sans-serif;
     color: var(--black);
@@ -23,13 +22,11 @@
     margin: 0;
  }
 
-
 a { color: var(--black);}
 a:hover { color: var(--gray);}
 h1 {font-size: var(--font-size-xl)}
 h2 {font-size: var(--font-size-lg);}
 h3 {font-size: var(--font-size-md);}
-
 
  input[type="text"],
  input[type="email"],
@@ -83,7 +80,6 @@ h3 {font-size: var(--font-size-md);}
     border-radius: var(--border-radius);
 }
 
-
 .header {
     display: grid;
     align-items: center;
@@ -115,11 +111,14 @@ h3 {font-size: var(--font-size-md);}
     text-decoration: underline;
 }
 
+
+
 .header__nav {
     grid-area: menu;
     display: flex;
     justify-content: center;
 }
+
 
 .header__button {
     grid-area: button;
@@ -295,7 +294,7 @@ h3 {font-size: var(--font-size-md);}
     position: absolute;
     top: 0;
     right: 0;
-    color: var(--gray-light);
+    color: whitesmoke;
     padding: 15px;
 }
 
