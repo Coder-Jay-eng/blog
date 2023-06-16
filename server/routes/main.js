@@ -115,6 +115,12 @@ router.get('/about', (req, res) => {
 	});
 });
 
+router.get('/contacts', (req, res) => {
+	res.render('contacts', {
+		currentRoute: '/contacts',
+	});
+});
+
 module.exports = router;
 
 // function insertPostData() {

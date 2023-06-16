@@ -39,7 +39,7 @@ router.get('/admin', async (req, res) => {
 			description: 'Simple Blog created with NodeJs, Express & MongoDb.',
 		};
 
-		res.render('admin/index', { locals, layout: adminLayout });
+		res.render('admin/login', { locals, layout: adminLayout });
 	} catch (error) {
 		console.log(error);
 	}
