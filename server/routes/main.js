@@ -13,9 +13,8 @@ router.get('', async (req, res) => {
 			title: 'NodeJS Blog',
 			description: 'Simple blog created with NodeJS, Express & MongoDB.',
 		};
-		// const data = await Post.find();
 
-		let perPage = 6;
+		let perPage = 10;
 		let page = req.query.page || 1;
 
 		const data = await Post.aggregate([{ $sort: { createdAt: -1 } }])
@@ -32,6 +31,7 @@ router.get('', async (req, res) => {
 			data,
 			current: page,
 			nextPage: hasNextPage ? nextPage : null,
+			currentRoute: './',
 		});
 	} catch (error) {
 		console.log(error);
@@ -66,12 +66,13 @@ router.get('/post/:id', async (req, res) => {
 		const locals = {
 			title: data.title,
 			description: 'Simple Blog created with NodeJs, Express & MongoDb.',
+			currentRoute: '/post/${slug}',
 		};
 
 		res.render('post', {
 			locals,
 			data,
-			currentRoute: `/post/${slug}`,
+			currentRoute: ``,
 		});
 	} catch (error) {
 		console.log(error);
@@ -88,6 +89,7 @@ router.post('/search', async (req, res) => {
 		const locals = {
 			title: 'Search',
 			description: 'Simple blog created with NodeJS, Express & MongoDB.',
+			currentRoute: '/search',
 		};
 		let searchTerm = req.body.searchTerm;
 		const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, '');
@@ -108,7 +110,9 @@ router.post('/search', async (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-	res.render('about');
+	res.render('about', {
+		currentRoute: '/about',
+	});
 });
 
 module.exports = router;
