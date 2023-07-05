@@ -1,1 +1,1 @@
-Building a blog with Node.js, EXpress and MongoDB
+Building a blog with Node.js, Express and MongoDB
